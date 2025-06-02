@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    overflow:  hidden;
+    background :linear-gradient(to top ,green,blue);
+    height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+    background-image: url(assets/image.png);
+}
+.road{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    background: #333;
+    border-top: 5px dashed white;
+}
+.car{
+    position: absolute;
+    bottom: 100px;
+    font-size: 50px;
+    animation: drive 5s linear infinite;
+}
+@keyframes drive{
+    0%{
+        right: 0;
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        right: 100vw;
+        transform: rotate(0deg);
+    }
+}
+
+.car1{
+    position: absolute;
+    bottom: 100px;
+    font-size: 50px;
+    animation: drive 2s linear infinite;
+}
+@keyframes drive{
+    0%{
+        right: 0;
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        right: 100vw;
+        transform: rotate(0deg);
+    }
+}
+
+.car2{
+    position: absolute;
+    bottom: 100px;
+    font-size: 50px;
+    animation: drive 3s linear infinite;
+}
+@keyframes drive{
+    0%{
+        right: 0;
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        right: 100vw;
+        transform: rotate(0deg);
+    }
+}
+.trafic-light{
+    position: absolute;
+    bottom: 200px   ;
+    width: 30px;
+    height: 80px;
+    /* height: 150px; */
+    background: #333;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 5px black;
+}
+.light{
+    width: 20px;
+    height: 20px;
+    background: #c91010;
+    border-radius: 50%;
+    margin: 5px auto;
+}
+.light:nth-child(2){
+    background: #f3f30c;
+    animation: blink 1s infinite;
+}
+.light:nth-child(3){
+    background:green;
+}
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.6;
+    }
+}
+.finish-line{
+    height: 100px;
+    width: 20px;
+    position: absolute;    
+    bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    background: repeating-linear-gradient(45deg, #fff, #fff 10px, #000 10px, #000 20px);
+}
