@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TodoApp</h1>
+    <input id="inputValue">
+    <button onclick="todoApp()">Add</button>
+    <ol id="todoList">
+        <li>
+            <button onclick="deleteTodo(event)">Delete</button>
+        </li>
+    </ol>
+
+    <script>
+        var inputValue = document.getElementById("inputValue");
+        var todoList = document.getElementById("todoList");
+        function todoApp(){
+            var lis = document.createElement("li");
+            lis.innerHTML = inputValue.value + "<button onclick='deleteTodo(event)'>Delete</button>";
+            todoList.append(lis);
+        }
+        function deleteTodo(event){
+            event.target.parentNode.remove();
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TodoApp</h1>
+    <input id="inputValues">
+    <button onclick="myapp()">Add</button>
+    <ol id="todo">
+        <li>
+            <button onclick="deleteData(event)">Delete</button>
+        </li>
+    </ol>
+    <script>
+        var inputValues = document.getElementById("inputValues");
+        var todo = document.getElementById("todo");
+        function myapp(){
+            var lis = document.createElement("li");
+            lis.innerHTML = inputValues.value + "<button onclick='deleteData(event)'>Delete</button>";
+            todo.append(lis)
+        }
+        function deleteData(event){
+            event.target.parentNode.remove();
+        }
+    </script>
+</body>
+</html>

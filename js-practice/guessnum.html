@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <input id="guess" type="number" required >
+    <button onclick="guessNumber()">Guess</button><br><br>
+    <input onkeyup="ShowingText()" id="innervalue" placeholder="Enter Text">
+    <h2 id="ShowText"></h2>
+    <p>Your Guessing Number right or wrong</p>
+    <p id="generatedValue"></p>
+    <p id="result"></p>
+    <script>
+
+        const guessvalue = document.getElementById("guess");
+        var generatedValue = document.getElementById("generatedValue");
+        const result = document.getElementById("result");
+        function guessNumber(){
+            const randomNumber = Math.floor(Math.random()*10)+1;
+            generatedValue.innerHTML = randomNumber;
+            var givenNumber = parseFloat(guessvalue.value);
+            if (givenNumber === randomNumber){
+                result.innerHTML = "Right Guess";
+                
+                
+            }else {
+                generatedValue.innerHTML = randomNumber;
+                result.innerHTML = "Wrong Guess, Try Again";
+                
+            }
+            
+        }
+        const showText = document.getElementById("ShowText");
+        const innervalue = document.getElementById("innervalue");
+        function ShowingText(){
+            showText.textContent = innervalue.value;
+        }
+    </script>
+</body>
+</html>
