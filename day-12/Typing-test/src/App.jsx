@@ -1,12 +1,7 @@
-import React from 'react'
-import TypingTest from './TypingTest'
+import TypingTest from "./TypingTest";
 
 function App() {
-  return (
-    <>
-    <TypingTest />
-    </>
-  )
+  return <TypingTest />;
 }
 
-export default App
+export default App;
